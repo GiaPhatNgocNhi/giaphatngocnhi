@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đám Cưới Huỳnh Gia Phát & Trịnh Ngọc Nhi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Falling Flowers -->
+    <div class="falling-flowers" id="fallingFlowers"></div>
+    
+    <!-- Falling Hearts -->
+    <div class="falling-hearts" id="fallingHearts"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Audio Player with Event Info -->
+        <div class="audio-player" id="audioPlayer">
+            <button class="audio-toggle" id="audioToggle">
+                <span class="audio-icon">🎵</span>
+                <span class="audio-text">Nhạc</span>
+            </button>
+            <audio id="backgroundMusic" autoplay loop>
+                <source src="https://assets.cinelove.me/mp3/473a7fd0-6d5f-482d-88d1-57da03163102.mp3" type="audio/mpeg">
+                Trình duyệt của bạn không hỗ trợ phát nhạc.
+            </audio>
+            
+            <!-- Event Info Card -->
+            <div class="event-info-card" id="eventInfoCard">
+                <button class="close-event-info" id="closeEventInfo">×</button>
+                <div class="event-info-header">
+                    <h3>Lễ Báo Hỷ</h3>
+                    <p class="event-info-date">Thứ Tư, 11 Tháng 02, 2026</p>
+                </div>
+                <div class="event-info-content">
+                    <div class="event-info-item">
+                        <span class="event-info-icon">🕐</span>
+                        <div class="event-info-text">
+                            <p class="event-info-label">Thời gian</p>
+                            <p class="event-info-value">21:00 - Đón khách<br>21:30 - Nhập tiệc</p>
+                        </div>
+                    </div>
+                    <div class="event-info-item">
+                        <span class="event-info-icon">📍</span>
+                        <div class="event-info-text">
+                            <p class="event-info-label">Địa điểm</p>
+                            <p class="event-info-value">THE SEVEN GARDEN</p>
+                            <p class="event-info-address">Đường Lý Thái Tổ Nối Dài<br>Phường Mỹ Phước<br>TP. Long Xuyên, An Giang</p>
+                        </div>
+                    </div>
+                    <div class="event-info-item">
+                        <span class="event-info-icon">👰🤵</span>
+                        <div class="event-info-text">
+                            <p class="event-info-label">Cô dâu & Chú rể</p>
+                            <p class="event-info-value">Huỳnh Gia Phát<br>&<br>Trịnh Ngọc Nhi</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#event" class="event-info-link">Xem chi tiết →</a>
+            </div>
+        </div>
+
+        <!-- Invitation Section -->
+        <div class="invitation-wrapper">
+            <!-- Wedding Date and Countdown -->
+            <div class="wedding-date-countdown">
+                <h2 class="wedding-date-title">SAVE THE DATE</h2>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="countdown-days">0</span>
+                        <span class="countdown-label">ngày</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="countdown-hours">0</span>
+                        <span class="countdown-label">giờ</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="countdown-minutes">0</span>
+                        <span class="countdown-label">phút</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="countdown-seconds">0</span>
+                        <span class="countdown-label">giây</span>
+                    </div>
+                </div>
+                <div class="wedding-date-info">
+                    <p class="wedding-date-text">Thứ Tư, 11 Tháng 02, 2026</p>
+                    <p class="wedding-time-text">21:00 - Đón khách | 21:30 - Nhập tiệc</p>
+                    <p class="wedding-location-text">THE SEVEN GARDEN</p>
+                </div>
+            </div>
+
+            <!-- Names and Wedding Symbol -->
+            <div class="invitation-names">
+                <h2 class="bride-name">Trịnh Ngọc Nhi</h2>
+                <div class="wedding-symbol">
+                    <span class="double-happiness">囍</span>
+                    <span class="wedding-text">WEDDING</span>
+                </div>
+                <h2 class="groom-name">Huỳnh Gia Phát</h2>
+            </div>
+
+            <!-- Floral Decorations -->
+            <div class="floral-left">🌸</div>
+            <div class="floral-right">🌸</div>
+
+            <!-- Envelope with Photo -->
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap" id="envelopeFlap"></div>
+                    <div class="envelope-body">
+                        <img src="R5__6565.jpg" alt="Gia Phát & Ngọc Nhi" class="envelope-photo" id="envelopePhoto">
+                    </div>
+                    <div class="wax-seal">
+                        <span>🌿</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invitation Text -->
+            <div class="invitation-text-section">
+                <p class="invitation-heading">TRÂN TRỌNG KÍNH MỜI</p>
+                <p class="guest-line">Anh/Chị ... và Gia Đình</p>
+            </div>
+
+            <!-- Interactive Buttons -->
+            <div class="interactive-buttons">
+                <button class="wish-btn" onclick="openWishesModal()">
+                    💬 Gửi lời chúc...
+                </button>
+                <button class="heart-btn" onclick="sendHeart()">
+                    ❤️ Bắn tim
+                </button>
+                <button class="gift-btn" onclick="openGiftModal()">
+                    🎁
+                </button>
+                <button class="like-btn" onclick="sendLike()">
+                    👍
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery" id="photo-gallery">
+        <div class="container">
+            <h2 class="section-title">Khoảnh Khắc Đẹp</h2>
+            <p class="gallery-subtitle">Những khoảnh khắc đáng nhớ của chúng tôi</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="R5__6565.jpg" alt="Khoảnh khắc đẹp 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6564.jpg" alt="Khoảnh khắc đẹp 2" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6963.jpg" alt="Khoảnh khắc đẹp 3" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6968.jpg" alt="Khoảnh khắc đẹp 4" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6548.jpg" alt="Khoảnh khắc đẹp 5" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6572.jpg" alt="Khoảnh khắc đẹp 6" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6584.jpg" alt="Khoảnh khắc đẹp 7" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6594.jpg" alt="Khoảnh khắc đẹp 8" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="R5__6625.jpg" alt="Khoảnh khắc đẹp 9" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event" id="event">
+        <div class="container">
+            <h2 class="section-title">Thông Tin Sự Kiện</h2>
+            
+            <div class="event-details">
+                <div class="event-card-full">
+                    <div class="event-header">
+                        <h3 class="event-title-main">Lễ Báo Hỷ</h3>
+                        <div class="event-divider"></div>
+                    </div>
+                    <div class="event-content-full">
+                        <div class="event-info-row">
+                            <div class="event-info-item">
+                                <div class="event-info-icon">📅</div>
+                                <div class="event-info-text">
+                                    <p class="event-label">Ngày</p>
+                                    <p class="event-value">Thứ Tư, 11 Tháng 02, 2026</p>
+                                    <p class="event-subvalue">(Dương lịch)</p>
+                                </div>
+                            </div>
+                            <div class="event-info-item">
+                                <div class="event-info-icon">⏰</div>
+                                <div class="event-info-text">
+                                    <p class="event-label">Giờ</p>
+                                    <p class="event-value">21:00 - Đón khách</p>
+                                    <p class="event-value">21:30 - Nhập tiệc</p>
+                                </div>
+                            </div>
+                            <div class="event-info-item">
+                                <div class="event-info-icon">📍</div>
+                                <div class="event-info-text">
+                                    <p class="event-label">Địa điểm</p>
+                                    <p class="event-value">THE SEVEN GARDEN</p>
+                                    <p class="event-subvalue">Đường Lý Thái Tổ Nối Dài<br>Phường Mỹ Phước<br>TP. Long Xuyên, An Giang</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-map-btn-container">
+                            <a href="https://maps.google.com/?q=THE+SEVEN+GARDEN+Long+Xuyen+An+Giang" target="_blank" class="map-link-btn-full">🗺️ Xem bản đồ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maps-container">
+                <div class="map-item">
+                    <h3 class="map-title">THE SEVEN GARDEN</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.123456789!2d105.4321!3d10.3456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDIwJzQ0LjIiTiAxMDXCsDI1JzU1LjYiRQ!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gift Box Section -->
+    <section class="gift-box" id="gift-box">
+        <div class="container">
+            <h2 class="section-title">Gửi Quà Mừng</h2>
+            <p class="gift-subtitle">Gửi quà mừng cho cô dâu chú rể</p>
+            
+            <div class="gift-box-container">
+                <div class="gift-item gift-item-unified" data-gift="couple">
+                    <div class="gift-ribbon">💝</div>
+                    <h3 class="gift-name">Cô Dâu & Chú Rể</h3>
+                    <p class="gift-label">TRỊNH NGỌC NHI & HUỲNH GIA PHÁT</p>
+                    <div class="gift-click-hint">👆 Click để xem QR code</div>
+                    <div class="gift-qr-container gift-qr-hidden">
+                        <img src="QRcode.png" alt="QR Code" class="gift-qr-image">
+                    </div>
+                    <div class="gift-bank-info gift-bank-hidden">
+                        <p class="gift-account">Thông tin sẽ được cập nhật</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Với tình yêu, <span class="footer-names">Huỳnh Gia Phát & Trịnh Ngọc Nhi</span></p>
+            <p class="footer-date">11 Tháng 02, 2026</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox for Gallery -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
